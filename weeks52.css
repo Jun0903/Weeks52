@@ -1,0 +1,57 @@
+.container {
+  padding: 40px;
+  margin: 40px;
+  background-color: #f5f5f5;
+}
+
+.introduce {
+  background-color: #f2ead3;
+}
+
+.hobby {
+  background-color: #f2ead3;
+}
+
+h1 {
+  font-family: "intelone-mono-font-family-regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: olive;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h3 {
+}
+
+#hobbies {
+  list-style-type: outside;
+}
+
+ul {
+  list-style-image: url(checked.png);
+}
+
+li {
+  text-transform: capitalize;
+  line-height: 2;
+}
+
+#hover:hover {
+  color: blue;
+}
+
+button {
+  color: dimgrey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+}
