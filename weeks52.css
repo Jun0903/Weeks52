@@ -1,18 +1,105 @@
 .container {
   padding: 40px;
   margin: 40px;
+  height: 2000px;
   background-color: #f5f5f5;
+}
+
+.contents {
+  width: 100%;
+  overflow-x: hidden;
+  height: 3000px;
 }
 
 .introduce {
   background-color: #f2ead3;
 }
 
+.major {
+  width: 100vw;
+  margin-bottom: 10rem;
+  display: flex;
+  font-family: "Pacifico", cursive;
+}
+
+.major .p:nth-child(1) {
+  margin-top: 5vh;
+  transform: rotate(-2deg);
+  background-color: #ff3796;
+}
+
+/* span:nth-child(2) {
+  transform: rotate(2deg);
+  background-color: #5800ff;
+  justify-content: flex-end;
+} */
+
+.first-parallel {
+  display: flex;
+  padding: 3rem 0;
+  font-size: 20px;
+}
+
+.second-parallel {
+  display: flex;
+  padding: 3rem 0;
+  font-size: 20px;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs .tab {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 50px;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(88, 82, 83);
+  border: 0.5px solid rgb(66, 61, 61);
+  color: white;
+  position: relative;
+}
+
+.items {
+  width: 300px;
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+}
+
+.items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 5px;
+  background-color: rgb(255, 53, 53);
+}
+
+.items:nth-child(2)::before {
+  left: 90px;
+  background-color: rgb(53, 100, 255);
+}
+
+.items:nth-child(3)::before {
+  left: 180px;
+  background-color: rgb(53, 255, 97);
+}
+
+.items.active {
+  display: inline-block;
+}
+
 .hobby {
   background-color: #f2ead3;
 }
 
-h1 {
+.lg-text {
   font-family: "intelone-mono-font-family-regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
     format("woff2");
@@ -22,14 +109,11 @@ h1 {
   color: olive;
 }
 
-h2 {
+/* h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-h3 {
-}
+} */
 
 #hobbies {
   list-style-type: outside;
@@ -49,9 +133,71 @@ li {
 }
 
 button {
-  color: dimgrey;
+  all: unset;
+  background-color: steelblue;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.modal_content {
+  background-color: white;
+  padding: 50px 100px;
+  text-align: center;
+  position: relative;
+  top: 0px;
+  width: 10%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+h1 {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
+}
+
+#dynamic {
+  position: relative;
+  display: inline-block;
+}
+
+#dynamic::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 4px;
+  height: 100%;
+  background-color: olive;
+}
+
+#dynamic.active::after {
+  display: none;
 }
